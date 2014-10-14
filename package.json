@@ -39,7 +39,8 @@
     "socket.io-client": "^1.1.0",
     "commander": "^2.3.0",
     "inquirer": "^0.7.1",
-    "restler": "^3.2.2"
+    "restler": "^3.2.2",
+    "bower": "latest"
   },
   "devDependencies": {
     "longjohn": "^0.2.4",
