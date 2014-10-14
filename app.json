@@ -2,5 +2,8 @@
   "name": "bridge server",
   "description": "Extend your adb connection to wherever you want.",
   "repository": "https://github.com/chitacan/bridge",
-  "keywords": ["adb", "node.js"]
+  "keywords": ["adb", "node.js"],
+  "env": {
+    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-nodejs"
+  }
 }
