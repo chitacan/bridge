@@ -1,18 +1,32 @@
 #!/usr/bin/env node
 
 var program = require('commander')
-  , debug   = require('debug')('client:executable');
+  , debug;
 
 program
   .version(require('../package').version)
+  .option('-s, --server'     , 'run bridge server mode')
   .option('-u, --url <url>'  , 'specify server url to connect', 'http://localhost:9500')
   .option('-p, --port <port>', 'specify port number to listen', 0)
   .parse(process.argv);
 
-debug('option.url  : ' + program.url);
-debug('option.port : ' + program.port);
+if (program.server) {
+  debug    = require('debug')('server:executable')
+  , www    = require('../app')({})
+  , app    = www.app
+  , server = www.server;
 
-require('../')({
-  url  : program.url,
-  port : program.port
-});
+  app.set('port', process.env.PORT || 9500);
+
+  server.listen(app.get('port'), function() {
+    debug('Express server listening on port ' + server.address().port);
+  });
+} else {
+  debug = require('debug')('client:executable');
+  debug('option.url  : ' + program.url);
+  debug('option.port : ' + program.port);
+  require('../')({
+    url  : program.url,
+    port : program.port
+  });
+}

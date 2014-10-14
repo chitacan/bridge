@@ -1,14 +1,18 @@
 {
-  "name": "bridge-server",
+  "name": "bridge",
   "version": "0.0.1",
-  "description": "Bridge your adb connection to wherever you want",
-  "main": "index.js",
+  "description": "Extend your adb connection to wherever you want",
+  "main": "lib/index.js",
   "scripts": {
-    "start": "DEBUG=express:application,server:* node ./bin/www",
-    "debug": "DEBUG=express:application,server:* node --debug-brk ./bin/www",
+    "start": "DEBUG=client:* node ./bin/bridge",
+    "remote": "DEBUG=client:* node ./bin/bridge",
+    "debug": "DEBUG=client:* node --debug-brk ./bin/bridge",
+    "start-server": "DEBUG=express:application,server:* node -s ./bin/bridge",
+    "debug-server": "DEBUG=express:application,server:* node --debug-brk -s ./bin/bridge",
     "test": "node node_modules/mocha/bin/mocha -R nyan",
     "postinstall": "bower install"
   },
+  "bin": "./bin/bridge",
   "repository": {
     "type": "git",
     "url": "https://github.com/chitacan/adb-bridge.git"
