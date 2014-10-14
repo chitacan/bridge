@@ -4,6 +4,7 @@
   "repository": "https://github.com/chitacan/bridge",
   "keywords": ["adb", "node.js"],
   "env": {
-    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-nodejs"
+    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-nodejs",
+    "NODE_ENV": "production"
   }
 }
