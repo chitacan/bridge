@@ -1,5 +1,5 @@
 'use strict'
-delete require.cache[require.resolve('../routes/api')]
+delete require.cache[require.resolve('../lib/server/routes/api')]
 
 var request = require('supertest')
   , should  = require('should')
@@ -29,7 +29,7 @@ describe('Bridge API', function(){
     return sockets[nsp];
   }
 
-  var app = require('../app')({bridge: MockBridge}).app;
+  var app = require('../lib/server/app')({bridge: MockBridge}).app;
 
   describe('/api/bridge', function() {
 

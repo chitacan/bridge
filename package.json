@@ -2,13 +2,13 @@
   "name": "bridge",
   "version": "0.0.1",
   "description": "Extend your adb connection to wherever you want",
-  "main": "lib/index.js",
+  "main": "lib/client/index.js",
   "scripts": {
     "start": "DEBUG=client:* node ./bin/bridge",
     "remote": "DEBUG=client:* node ./bin/bridge",
     "debug": "DEBUG=client:* node --debug-brk ./bin/bridge",
-    "start-server": "DEBUG=express:application,server:* node -s ./bin/bridge",
-    "debug-server": "DEBUG=express:application,server:* node --debug-brk -s ./bin/bridge",
+    "start-server": "DEBUG=express:application,server:* node ./bin/bridge -s",
+    "debug-server": "DEBUG=express:application,server:* node --debug-brk ./bin/bridge -s",
     "test": "node node_modules/mocha/bin/mocha -R nyan",
     "postinstall": "bower install"
   },

@@ -112,4 +112,4 @@ node_modules
 .lock-wscript
 
 # bower dependency
-public/dep
+lib/server/public/dep

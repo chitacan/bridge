@@ -1,10 +1,10 @@
 'use strict'
-delete require.cache[require.resolve('../routes/api')]
-delete require.cache[require.resolve('../routes/index')]
+delete require.cache[require.resolve('../lib/server/routes/api')]
+delete require.cache[require.resolve('../lib/server/routes/index')]
 
 var should  = require('should')
   , rest    = require('restler')
-  , www     = require('../app')({})
+  , www     = require('../lib/server/app')({})
   , socket  = require('socket.io-client')
 
 var app    = www.app

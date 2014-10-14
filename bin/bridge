@@ -12,7 +12,7 @@ program
 
 if (program.server) {
   debug    = require('debug')('server:executable')
-  , www    = require('../app')({})
+  , www    = require('../lib/server/app')({})
   , app    = www.app
   , server = www.server;
 
