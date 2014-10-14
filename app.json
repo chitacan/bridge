@@ -1,0 +1,6 @@
+{
+  "name": "bridge server",
+  "description": "Extend your adb connection to wherever you want.",
+  "repository": "https://github.com/chitacan/bridge",
+  "keywords": ["adb", "node.js"]
+}
