@@ -5,9 +5,9 @@ var program = require('commander')
 
 program
   .version(require('../package').version)
-  .option('-s, --server'     , 'run bridge server mode')
-  .option('-u, --url <url>'  , 'specify server url to connect', 'http://localhost:9500')
-  .option('-p, --port <port>', 'specify port number to listen', 0)
+  .option('-s, --server'     , 'run server mode')
+  .option('-u, --url <url>'  , 'specify server url to connect (client mode only)', 'http://localhost:9500')
+  .option('-p, --port <port>', 'specify port number to listen (client mode only)', 0)
   .parse(process.argv);
 
 if (program.server) {
