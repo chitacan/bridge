@@ -19,11 +19,11 @@ $ bridge -s
 $ PORT=1234 bridge -s
 ```
 
-Now your bridge client & [bridge app](https://github.com/chitacan/bridge-app) can connect to server.
+Now your `bridge client` & [`bridge app`](https://github.com/chitacan/bridge-app) can connect to this server.
 
 ## Connect to Server
 
-Just run `bridge` with server url.
+Just type `bridge` with server url will run `bridge client`.
 
 ```
 $ bridge -u <url>
