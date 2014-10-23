@@ -46,7 +46,7 @@ $ bridge -u <url>
 
 ## Deploy to Heroku
 
-No server? you can deploy the server to heroku. Just hit the button.
+No server? you can deploy the server to heroku. Just hit the `button`. :lipstick:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/chitacan/bridge)
 
