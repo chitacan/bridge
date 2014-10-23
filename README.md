@@ -41,7 +41,7 @@ $ bridge -u <url>
     -s, --server          run server mode
     -u, --url <url>       specify server url to connect (client mode only)
     -p, --port <port>     specify port number to listen (client mode only)
-    -a, --adbPort <port>  specify adb server port number to connect (client mode only)
+    -a, --adbport <port>  specify adb server port number to connect (client mode only)
 ```
 
 ## Deploy to Heroku

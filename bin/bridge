@@ -8,7 +8,7 @@ program
   .option('-s, --server'     , 'run server mode')
   .option('-u, --url <url>'  , 'specify server url to connect (client mode only)', 'http://localhost:9500')
   .option('-p, --port <port>', 'specify port number to listen (client mode only)', 0)
-  .option('-a, --adbPort <port>', 'specify adb server port number to connect (client mode only)', 5037)
+  .option('-a, --adbport <port>', 'specify adb server port number to connect (client mode only)', 5037)
   .parse(process.argv);
 
 if (program.server) {
@@ -29,6 +29,6 @@ if (program.server) {
   require('../')({
     url     : program.url,
     port    : program.port,
-    adbPort : program.adbPort
+    adbPort : program.adbport
   });
 }
