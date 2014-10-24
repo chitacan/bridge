@@ -8,7 +8,7 @@
     "remote": "DEBUG=client:* node ./bin/bridge",
     "debug": "DEBUG=client:* node --debug-brk ./bin/bridge",
     "start-server": "DEBUG=express:application,server:* node ./bin/bridge -s",
-    "debug-server": "DEBUG=express:application,server:* node --debug-brk ./bin/bridge -s",
+    "debug-server": "DEBUG=express:application,server:*,packet node --debug-brk ./bin/bridge -s",
     "test": "node node_modules/mocha/bin/mocha -R nyan",
     "postinstall": "bower install"
   },
